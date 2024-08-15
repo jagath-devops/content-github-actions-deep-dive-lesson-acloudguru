@@ -1,3 +1,38 @@
+Start with the - lab branch
+
+Completed solution in :  Lab-package-solution
+and following deploy-pipeline.yaml summary rom the above
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check out code 
+      - name: Set up Python
+      - name: Install libraries
+      - name: Lint with flake8
+  build:
+    runs-on: ubuntu-latest
+    needs: lint        <====== wait till the lint job completes
+    steps:
+      - name: Check out code
+      - name: Set up Python
+      - name: Install libraries
+      - name: Zip bundle
+      - name: Archive artifact
+  publish:
+    runs-on: ubuntu-latest
+    needs: build <====== wait till the build job completes
+    steps:
+      - name: Create release
+      - name: Download artifact
+      - name: Upload release asset
+
+
+
+
+
+
 Additional Resources
 Scenario
 Your team has set up an automated build process for your application code. You want to store this artifact so other teams can access it for downstream work. You will need to build out the workflow file to leverage GitHub Packages to store new versions of your code with each new build.
