@@ -72,6 +72,11 @@ If you have trouble, the complete code for one possible solution is on the lab-p
 
 ## Create a Release
 
+
+
+
+
+
 ## Create a publish job.
 Add a step to create a release and commit the changes.
 Check the release in the GitHub console. It has the complete codebase, but not the build artifact with the dependencies.
@@ -133,6 +138,7 @@ Create a new publish job:
 
 Note: Ensure the indentation is correct (none of the job's text should be underlined in red). Otherwise, you'll get an error when you try to run the job.
 
+```
 publish:
   runs-on: ubuntu-latest
   steps:
@@ -147,6 +153,9 @@ publish:
         body: New release for ${{ github.sha }}. Release notes can be found in the docs.
         draft: false
         prerelease: false
+```
+
+
 At the top right, click Start commit and select Commit changes.
 
 Select View runs to view the executed deployment pipeline.
@@ -162,6 +171,7 @@ Return to the deploy-pipeline.yaml file and click the pencil icon. to
 
 At the bottom of our publish workflow, add a new step to download an artifact:
 
+```
 - name: Download artifact
     uses: actions/download-artifact@v2
     with:
@@ -182,6 +192,8 @@ Add a new step to upload a build artifact as part of the release:
     asset_path: ./${{ github.sha }}.zip
     asset_name: source_code_with_libraries.zip
     asset_content_type: application/zip
+```
+
 Click Start commit > Commit changes.
 
 Click View runs.
