@@ -33,11 +33,11 @@ jobs:
 
 
 
-Additional Resources
+#Additional Resources
 Scenario
 Your team has set up an automated build process for your application code. You want to store this artifact so other teams can access it for downstream work. You will need to build out the workflow file to leverage GitHub Packages to store new versions of your code with each new build.
 
-Objectives
+##Objectives
 Set up a GitHub repository.
 Create a release.
 Add a release asset.
@@ -56,11 +56,11 @@ Git tags: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 
 GitHub releases: https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository
 
-Learning Objectives
+##Learning Objectives
 0 of 3 completed
 
 
-Set up a GitHub Repository
+##Set up a GitHub Repository
 
 Fork the repo https://github.com/linuxacademy/content-github-actions-deep-dive-lesson.
 Check out the lab branch and confirm /github/workflows/deploy-pipeline.yaml contains lint and build jobs.
@@ -69,13 +69,13 @@ Note: You can clone the repo locally or work in the GitHub browser.
 If you have trouble, the complete code for one possible solution is on the lab-package-solution.
 
 
-Create a Release
+##Create a Release
 
-Create a publish job.
+##Create a publish job.
 Add a step to create a release and commit the changes.
 Check the release in the GitHub console. It has the complete codebase, but not the build artifact with the dependencies.
 
-Add a Release Asset
+##Add a Release Asset
 
 Set the publish job to run after the build job.
 Add a step to the publish job to upload the build artifact as a part of the release and commit the changes.
