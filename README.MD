@@ -1,7 +1,19 @@
-# Start with the - lab branch
+# Additional Resources
+Scenario
+Your team has set up an automated build process for your application code. You want to store this artifact so other teams can access it for downstream work. You will need to build out the workflow file to leverage GitHub Packages to store new versions of your code with each new build.
 
-Completed solution in :  Lab-package-solution
-and following deploy-pipeline.yaml summary rom the above
+
+## Start with the
+```
+lab branch
+```
+
+## Completed solution in :  
+```
+Lab-package-solution
+```
+
+And following deploy-pipeline.yaml summary from the above - Lab-package-solution branch
 
 ```
 jobs:
@@ -31,12 +43,6 @@ jobs:
 ```
 
 
-
-
-
-# Additional Resources
-Scenario
-Your team has set up an automated build process for your application code. You want to store this artifact so other teams can access it for downstream work. You will need to build out the workflow file to leverage GitHub Packages to store new versions of your code with each new build.
 
 ## Objectives
 Set up a GitHub repository.
