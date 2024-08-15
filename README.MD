@@ -3,6 +3,7 @@
 Completed solution in :  Lab-package-solution
 and following deploy-pipeline.yaml summary rom the above
 
+```
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -27,7 +28,7 @@ jobs:
       - name: Create release
       - name: Download artifact
       - name: Upload release asset
-
+```
 
 
 
